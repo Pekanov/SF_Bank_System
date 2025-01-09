@@ -1,0 +1,17 @@
+jwt:
+  secret-key: testSecretKey
+  access-validity: 3600000
+  refresh-validity: 86400000
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+    url: jdbc:postgresql://localhost:5432/BS_Database
+    username: user
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
