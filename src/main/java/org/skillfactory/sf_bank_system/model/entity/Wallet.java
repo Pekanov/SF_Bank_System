@@ -1,23 +1,20 @@
 package org.skillfactory.sf_bank_system.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.List;
 
 @Entity
-@Table(name = "budget")
+@Table(name = "wallet")
 @SuperBuilder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Budget {
+public class Wallet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,12 +25,8 @@ public class Budget {
     private User user;
 
     @Column(nullable = false)
-    private String category;
+    private BigDecimal balance;
 
-    @Column(nullable = false)
-    private BigDecimal limitAmount;
-
-    @Column(nullable = false)
-    private LocalDate validUntil;
-
+    @OneToMany(mappedBy = "wallet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Transaction> transactions;
 }

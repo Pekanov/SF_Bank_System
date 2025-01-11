@@ -1,7 +1,7 @@
 package org.skillfactory.sf_bank_system.controller;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import jakarta.validation.ValidationException;
-import org.skillfactory.sf_bank_system.model.entity.dto.ErrorDto;
+import org.skillfactory.sf_bank_system.model.dto.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;

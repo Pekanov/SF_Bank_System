@@ -1,9 +1,9 @@
 package org.skillfactory.sf_bank_system.controller;
 
 import jakarta.validation.Valid;
-import org.skillfactory.sf_bank_system.model.entity.dto.AuthorisationDto;
-import org.skillfactory.sf_bank_system.model.entity.dto.JwtTokensDto;
-import org.skillfactory.sf_bank_system.model.entity.dto.RegisterDto;
+import org.skillfactory.sf_bank_system.model.dto.AuthorisationDto;
+import org.skillfactory.sf_bank_system.model.dto.JwtTokensDto;
+import org.skillfactory.sf_bank_system.model.dto.RegisterDto;
 import org.skillfactory.sf_bank_system.service.AuthenticationService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

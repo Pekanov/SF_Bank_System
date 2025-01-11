@@ -3,9 +3,9 @@ package org.skillfactory.sf_bank_system.service;
 
 import lombok.RequiredArgsConstructor;
 import org.skillfactory.sf_bank_system.model.entity.User;
-import org.skillfactory.sf_bank_system.model.entity.dto.AuthorisationDto;
-import org.skillfactory.sf_bank_system.model.entity.dto.JwtTokensDto;
-import org.skillfactory.sf_bank_system.model.entity.dto.RegisterDto;
+import org.skillfactory.sf_bank_system.model.dto.AuthorisationDto;
+import org.skillfactory.sf_bank_system.model.dto.JwtTokensDto;
+import org.skillfactory.sf_bank_system.model.dto.RegisterDto;
 import org.skillfactory.sf_bank_system.repository.UserRepository;
 import org.skillfactory.sf_bank_system.security.JwtTokenProvider;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -1,4 +1,4 @@
-package org.skillfactory.sf_bank_system.model.entity.dto;
+package org.skillfactory.sf_bank_system.model.dto;
 import lombok.Builder;
 import lombok.Data;
 

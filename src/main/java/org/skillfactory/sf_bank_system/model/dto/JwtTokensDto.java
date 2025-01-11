@@ -1,4 +1,4 @@
-package org.skillfactory.sf_bank_system.model.entity.dto;
+package org.skillfactory.sf_bank_system.model.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
