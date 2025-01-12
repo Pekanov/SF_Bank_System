@@ -7,6 +7,7 @@ import org.skillfactory.sf_bank_system.model.dto.AuthorisationDto;
 import org.skillfactory.sf_bank_system.model.dto.JwtTokensDto;
 import org.skillfactory.sf_bank_system.model.dto.RegisterDto;
 import org.skillfactory.sf_bank_system.repository.UserRepository;
+import org.skillfactory.sf_bank_system.repository.WalletRepository;
 import org.skillfactory.sf_bank_system.security.JwtTokenProvider;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,6 +24,7 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final JwtTokenProvider jwtTokenProvider;
+    private final WalletService walletService;
 
 
     public JwtTokensDto registerUser(RegisterDto registerDto){
@@ -37,6 +39,8 @@ public class AuthenticationService {
                     build();
 
             userRepository.save(newUser);
+            walletService.createWallet(newUser);
+
             return createTokensForUser(newUser);
         }catch (Exception e){
             throw new RuntimeException("User registration is not successful", e);

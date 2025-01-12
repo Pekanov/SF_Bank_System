@@ -25,8 +25,11 @@ public class Wallet {
     private User user;
 
     @Column(nullable = false)
-    private BigDecimal balance;
+    private Integer balance;
 
     @OneToMany(mappedBy = "wallet", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Transaction> transactions;
+
+    @OneToMany(mappedBy = "wallet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Budget> budgets;
 }

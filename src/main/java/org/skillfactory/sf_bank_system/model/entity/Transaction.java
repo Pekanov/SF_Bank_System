@@ -31,11 +31,25 @@ public class Transaction {
     private TransactionType type;
 
     @Column(nullable = false)
-    private BigDecimal amount;
+    private Integer amount;
 
     @Column(nullable = false)
     private String category;
 
+    @Column
+    private String name;
+
     @Column(nullable = false)
     private LocalDate date;
+
+
+    @PostPersist
+    private void setDefaultUsername() {
+        if (this.category == null) {
+            this.category = "unknown category";
+        }
+        this.date = LocalDate.now();
+    }
+
+
 }

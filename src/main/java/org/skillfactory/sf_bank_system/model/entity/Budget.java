@@ -24,14 +24,16 @@ public class Budget {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "wallet_id", nullable = false)
+    private Wallet wallet;
 
     @Column(nullable = false)
     private String category;
 
     @Column(nullable = false)
-    private BigDecimal limitAmount;
+    private Integer limitAmount;
+
+    private Integer currentAmount;
 
     @Column(nullable = false)
     private LocalDate validUntil;
