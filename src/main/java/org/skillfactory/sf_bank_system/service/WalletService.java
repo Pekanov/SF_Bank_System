@@ -24,4 +24,8 @@ public class WalletService {
             throw new RuntimeException("Failed to create wallet for user with id " + user.getId() ,e);
         }
     }
+
+
+
+
 }

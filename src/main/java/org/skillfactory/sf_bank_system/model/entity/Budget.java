@@ -35,7 +35,5 @@ public class Budget {
 
     private Integer currentAmount;
 
-    @Column(nullable = false)
-    private LocalDate validUntil;
 
 }
