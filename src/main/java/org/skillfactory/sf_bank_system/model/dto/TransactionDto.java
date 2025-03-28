@@ -9,7 +9,6 @@ import org.skillfactory.sf_bank_system.model.entity.TransactionType;
 import java.time.LocalDate;
 
 @Data
-@RequiredArgsConstructor
 @Builder
 public class TransactionDto {
     private Long id;

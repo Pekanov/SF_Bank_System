@@ -48,7 +48,7 @@ public class BudgetService {
                         .build();
                 budgetRepository.save(newBudget);
             }catch (RuntimeException e) {
-                throw new RuntimeException("Failde to create new budget", e);
+                throw new RuntimeException("Failed to create new budget", e);
             }
 
         }

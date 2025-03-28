@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.skillfactory.sf_bank_system.model.entity.User;
 import org.skillfactory.sf_bank_system.model.entity.Wallet;
 import org.skillfactory.sf_bank_system.repository.WalletRepository;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 @Service
